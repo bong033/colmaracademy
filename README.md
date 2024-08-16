@@ -25,3 +25,23 @@
 
     ```
 
+3.  Important Note on css specificity:
+
+    .   Universal selector (*) targets every element (regardless tag, class, ID)
+    .   If pseudo class :root is used, :root takes priority over html
+        .   When applied, font size of 5px takes priority over that of html
+    .   Here, html selector takes priority as root element over universal selector
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* :root{ font-size: 5px; } */
+
+    html, body {
+        box-sizing: border-box;
+        font-family: "Lato", sans-serif;
+        font-size: 16px;
+    }
+
